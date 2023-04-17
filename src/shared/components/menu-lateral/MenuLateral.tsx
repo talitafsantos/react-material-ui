@@ -1,14 +1,14 @@
 import { Avatar, Divider, Drawer, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
 import HomeIcon from '@mui/icons-material/Home';
-import { pink } from '@mui/material/colors';
-import { useAppDrawerContext } from '../../contexts';
+import {  yellow } from '@mui/material/colors';
+import { useDrawerContext } from '../../contexts';
 
 export const MenuLateral: React.FC<{children: React.ReactNode}> = ({children}) => {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const { isDrawerOpen, toggleDrawerOpen } = useAppDrawerContext();
+  const { isDrawerOpen, toggleDrawerOpen } = useDrawerContext();
 
   return (
     <>
@@ -24,7 +24,7 @@ export const MenuLateral: React.FC<{children: React.ReactNode}> = ({children}) =
             <List component="nav">
               <ListItemButton>
                 <ListItemIcon>
-                  <HomeIcon sx={{color: pink[500]}} />
+                  <HomeIcon sx={{color: yellow[500]}} />
                 </ListItemIcon>
                 <ListItemText primary="Página Inicial" />
               </ListItemButton>
